@@ -1,0 +1,44 @@
+[
+  {
+    "id": 101,
+    "pointsCost": 100,
+    "voucher": {
+      "id": 1,
+      "code": "GIAM10PHANTRĂM",
+      "title": "Giảm 10% đơn hàng",
+      "description": "Giảm 10% cho tổng giá trị đơn hàng, tối đa 20.000đ.",
+      "expiryDate": "2025-12-31",
+      "type": "PERCENT",
+      "value": 10,
+      "condition": "Đơn hàng từ 50.000đ"
+    }
+  },
+  {
+    "id": 102,
+    "pointsCost": 250,
+    "voucher": {
+      "id": 2,
+      "code": "FREESHIP25",
+      "title": "Miễn phí vận chuyển",
+      "description": "Miễn phí vận chuyển cho đơn hàng.",
+      "expiryDate": "2025-10-31",
+      "type": "SHIPPING",
+      "value": 25000,
+      "condition": "Đơn hàng từ 100.000đ"
+    }
+  },
+  {
+    "id": 103,
+    "pointsCost": 200,
+    "voucher": {
+      "id": 3,
+      "code": "GIAM20K",
+      "title": "Giảm ngay 20.000đ",
+      "description": "Giảm trực tiếp 20.000đ vào tổng hóa đơn.",
+      "expiryDate": "2025-09-30",
+      "type": "FIXED_AMOUNT",
+      "value": 20000,
+      "condition": "Không có"
+    }
+  }
+]

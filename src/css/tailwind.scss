@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #FDFCF9;
+  --foreground: #4A2E0C;
+  --section: #ffffff;
+  /* --- THAY ĐỔI Ở ĐÂY --- */
+  --primary: #F5B000; /* Màu vàng đậm hơn */
+  --primaryForeground: #4A2E0C;
+  /* --- THAY ĐỔI Ở ĐÂY --- */
+  --inactive: #888888;   /* Màu xám đậm hơn cho thông tin phụ */
+  --tabIndicator: #212121;
+  /* --- THAY ĐỔI Ở ĐÂY --- */
+  --subtitle: #555555;   /* Màu xám đậm hơn cho giá gạch chéo */
+  --danger: #f50000;
+  --skeleton: #e9e9e9;
+
+  --zaui-light-button-primary-background: var(--primary);
+  --zaui-light-button-primary-text: var(--primaryForeground);
+  /* --- THAY ĐỔI Ở ĐÂY --- */
+  --zaui-light-button-secondary-background: #f8e07d; /* Màu nền phụ nhạt hơn */
+  --zaui-light-button-secondary-text: #92400E;      /* Màu chữ phụ đậm hơn */
+  --zaui-light-button-tertiary-text: var(--foreground);
+  --zaui-light-button-primary-background-pressed: var(
+    --zaui-light-button-primary-background
+  );
+  --zaui-light-button-secondary-background-pressed: var(
+    --zaui-light-button-secondary-background
+  );
+  --zaui-light-tabbar-active-line: var(--primary);
+  --zaui-light-tabbar-label-active: var(--primary);
+
+  --safe-top: var(--zaui-safe-area-inset-top, env(safe-area-inset-top, 30px));
+  --safe-bottom: max(
+    16px,
+    var(--zaui-safe-area-inset-bottom, env(safe-area-inset-bottom, 30px))
+  );
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "V2K",
+    "image": "https://zalo-miniapp.github.io/zaui-market/dummy/product/apples.png",
+    "address": "Sàn Thương Mại V2K Giá Rẻ",
+    "location": {
+      "lat": 10.768746,
+      "lng": 106.728228
+    }
+  },
+  {
+    "id": 2,
+    "name": "V2K - AFF 1 Click",
+    "image": "https://zalo-miniapp.github.io/zaui-market/dummy/product/apples.png",
+    "address": "Affiliate Chưa Bao Giờ Dễ Dàng Đến Thế",
+    "location": {
+      "lat": 10.768746,
+      "lng": 106.728228
+    }
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1001,
+    "status": "pending",
+    "createdAt": "2025-09-22T14:30:00Z",
+    "totalPrice": 550000,
+    "items": [
+      {
+        "productId": 1,
+        "productName": "Áo Thun Thể Thao Nam",
+        "quantity": 1,
+        "price": 250000,
+        "image": "https://i.imgur.com/example-product-1.jpg"
+      },
+      {
+        "productId": 2,
+        "productName": "Quần Short Kaki",
+        "quantity": 1,
+        "price": 300000,
+        "image": "https://i.imgur.com/example-product-2.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1002,
+    "status": "pending",
+    "createdAt": "2025-09-21T10:00:00Z",
+    "totalPrice": 450000,
+    "items": [
+      {
+        "productId": 3,
+        "productName": "Váy Hoa Nữ Vintage",
+        "quantity": 1,
+        "price": 450000,
+        "image": "https://i.imgur.com/example-product-3.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1003,
+    "status": "delivering",
+    "createdAt": "2025-09-20T18:15:00Z",
+    "totalPrice": 1250000,
+    "items": [
+      {
+        "productId": 4,
+        "productName": "Giày Sneaker Trắng",
+        "quantity": 1,
+        "price": 750000,
+        "image": "https://i.imgur.com/example-product-4.jpg"
+      },
+      {
+        "productId": 5,
+        "productName": "Túi Tote Vải Canvas",
+        "quantity": 1,
+        "price": 500000,
+        "image": "https://i.imgur.com/example-product-5.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1004,
+    "status": "delivered",
+    "createdAt": "2025-09-15T11:45:00Z",
+    "receivedAt": "2025-09-18T16:00:00Z",
+    "totalPrice": 350000,
+    "items": [
+      {
+        "productId": 6,
+        "productName": "Nón Lưỡi Trai Thêu Chữ",
+        "quantity": 1,
+        "price": 350000,
+        "image": "https://i.imgur.com/example-product-6.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1005,
+    "status": "canceled",
+    "createdAt": "2025-09-19T09:00:00Z",
+    "totalPrice": 250000,
+    "items": [
+      {
+        "productId": 1,
+        "productName": "Áo Thun Thể Thao Nam",
+        "quantity": 1,
+        "price": 250000,
+        "image": "https://i.imgur.com/example-product-1.jpg"
+      }
+    ]
+  }
+]

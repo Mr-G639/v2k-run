@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "productId": 1,
+    "author": {
+      "name": "Trần Văn An",
+      "avatar": "https://zalo-miniapp.github.io/zaui-market/dummy/avatar-1.jpg"
+    },
+    "rating": 5,
+    "text": "Táo rất tươi và giòn! Giao hàng nhanh chóng, đóng gói cẩn thận. Sẽ tiếp tục ủng hộ shop.",
+    "timestamp": "2025-09-17T10:30:00Z",
+    "images": [
+        "https://zalo-miniapp.github.io/zaui-market/dummy/product/apples.png",
+      "https://zalo-miniapp.github.io/zaui-market/dummy/product/apples.png"
+    ]
+  },
+  {
+    "id": 2,
+    "productId": 1,
+    "author": {
+      "name": "Lê Thị Bình",
+      "avatar": "https://zalo-miniapp.github.io/zaui-market/dummy/avatar-2.jpg"
+    },
+    "rating": 4,
+    "text": "Chất lượng sản phẩm tốt, tuy nhiên có một vài quả bị dập nhẹ. Hy vọng shop sẽ kiểm tra kỹ hơn vào lần sau.",
+    "timestamp": "2025-09-16T15:00:00Z",
+     "images": [
+        "https://zalo-miniapp.github.io/zaui-market/dummy/product/apples.png",
+        "https://zalo-miniapp.github.io/zaui-market/dummy/product/creamy.png"
+    ]
+  }
+]
+

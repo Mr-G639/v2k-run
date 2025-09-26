@@ -1,0 +1,28 @@
+[
+  {
+    "id": "txn_001",
+    "type": "COMMISSION",
+    "amount": 20500,
+    "status": "COMPLETED",
+    "date": "2025-09-16T10:00:00Z",
+    "description": "Hoa hồng từ đơn hàng #DH12345",
+    "referralId": "ref_001"
+  },
+  {
+    "id": "txn_002",
+    "type": "COMMISSION",
+    "amount": 15000,
+    "status": "PENDING",
+    "date": "2025-09-17T11:30:00Z",
+    "description": "Hoa hồng từ đơn hàng #DH12350",
+    "referralId": "ref_002"
+  },
+  {
+    "id": "txn_003",
+    "type": "WITHDRAWAL",
+    "amount": -50000,
+    "status": "COMPLETED",
+    "date": "2025-09-15T14:00:00Z",
+    "description": "Rút tiền về tài khoản VCB"
+  }
+]

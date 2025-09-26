@@ -1,0 +1,26 @@
+[
+  {
+    "id": "ref_001",
+    "orderId": "#DH12345",
+    "totalAmount": 205000,
+    "commissionRate": 10,
+    "commissionAmount": 20500,
+    "sharedLink": "https://zaui.market/product/1?ref=...",
+    "customerName": "Nguyễn Văn A",
+    "paymentStatus": "success",
+    "commissionStatus": "COMPLETED",
+    "date": "2025-09-16T10:00:00Z"
+  },
+  {
+    "id": "ref_002",
+    "orderId": "#DH12350",
+    "totalAmount": 150000,
+    "commissionRate": 10,
+    "commissionAmount": 15000,
+    "sharedLink": "https://zaui.market/product/4?ref=...",
+    "customerName": "Trần Thị B",
+    "paymentStatus": "success",
+    "commissionStatus": "PENDING",
+    "date": "2025-09-17T11:30:00Z"
+  }
+]

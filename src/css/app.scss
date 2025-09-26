@@ -1,0 +1,99 @@
+// src/css/app.scss
+
+:not(input):not(textarea) {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.toast-container {
+  > div > div {
+    padding: 12px 16px;
+    background-color: #212121;
+    color: #fffffff2;
+    border-radius: 8px;
+  }
+}
+
+.zaui-sheet {
+  .zaui-sheet-content {
+    min-height: unset;
+  }
+}
+
+.zaui-btn {
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:active {
+    opacity: 0.75;
+  }
+}
+
+.zaui-btn-tertiary {
+  background-color: var(--skeleton);
+
+  &:active,
+  &:focus {
+    background-color: var(--skeleton);
+  }
+}
+
+.zaui-tabs-tabbar {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  text-align: center;
+}
+.zaui-tab-content {
+  flex: 1;
+  overflow-y: hidden;
+}
+.zaui-tab {
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* CSS cho hiệu ứng chữ chạy (Marquee) */
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee-container {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee-content {
+  display: inline-block;
+  will-change: transform; /* Tối ưu hóa hiệu năng animation */
+}
+
+@keyframes marquee-dynamic {
+  from {
+    transform: translateX(var(--marquee-start-position));
+  }
+  to {
+    transform: translateX(var(--marquee-end-position));
+  }
+}
+
+/* SỬA LỖI: Đã xóa bỏ các hiệu ứng tùy chỉnh cho toast để dùng mặc định */

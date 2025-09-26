@@ -1,0 +1,22 @@
+{
+  "app": {
+    "title": "V2K Shop",
+    "textColor": "white",
+    "headerColor": "#F5B000",
+    "statusBar": "transparent",
+    "actionBarHidden": true,
+    "hideAndroidBottomNavigationBar": false,
+    "hideIOSSafeAreaBottom": true,
+    "selfControlLoading": false
+  },
+  "listCSS": [],
+  "listSyncJS": [],
+  "listAsyncJS": [],
+  "template": {
+    "name": "zaui-market",
+    "apiUrl": "",
+    "oaIDtoOpenChat": "2585606122290030502",
+    "shopName": "V2K",
+    "shopAddress": "Sàn TMĐT V2K Giá Rẻ"
+  }
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "categoryId": 1,
+    "name": "Táo Fuji Hảo Hạng - 1kg mọng nước, là lựa chọn tuyệt vời cho sức khỏe",
+    "price": 67900,
+    "originalPrice": 80000,
+    "images": [
+      "https://zalo-miniapp.github.io/zaui-market/dummy/product/apples.png",
+      "https://zalo-miniapp.github.io/zaui-market/dummy/product/apples.png"
+    ],
+    "video": "https://zalo-miniapp.github.io/zaui-market/dummy/product-video.mp4",
+    "detail": "Táo Fuji giòn, ngọt, mọng nước, là lựa chọn tuyệt vời cho sức khỏe.",
+    "soldCount": 125
+  },
+  {
+    "id": 2,
+    "categoryId": 2,
+    "name": "Kem hộp Socola Chip",
+    "price": 313000,
+    "originalPrice": 350000,
+    "images": [
+      "https://zalo-miniapp.github.io/zaui-market/dummy/product/creamy.png",
+      "https://zalo-miniapp.github.io/zaui-market/dummy/product/creamy.png"
+    ],
+    "video": "https://zalo-miniapp.github.io/zaui-market/dummy/product-video.mp4",
+    "detail": "Kem hộp Socola Chip thơm ngon, mát lạnh, giải nhiệt mùa hè.",
+    "soldCount": 88
+  },
+  {
+    "id": 3,
+    "categoryId": 3,
+    "name": "Bánh quy bơ Danisa",
+    "price": 150000,
+    "originalPrice": 180000,
+    "images": [
+      "https://zalo-miniapp.github.io/zaui-market/dummy/product/danisa.png",
+      "https://zalo-miniapp.github.io/zaui-market/dummy/product/danisa.png"
+    ],
+    "video": "https://zalo-miniapp.github.io/zaui-market/dummy/product-video.mp4",
+    "detail": "Bánh quy bơ Danisa hộp thiếc sang trọng, giòn tan, thơm ngon.",
+    "soldCount": 210
+  },
+  {
+    "id": 4,
+    "categoryId": 4,
+    "name": "Thùng sữa tươi Vinamilk",
+    "price": 250000,
+    "originalPrice": 275000,
+    "images": [
+      "https://zalo-miniapp.github.io/zaui-market/dummy/product/milk.png",
+      "https://zalo-miniapp.github.io/zaui-market/dummy/product/milk.png"
+    ],
+    "video": "https://zalo-miniapp.github.io/zaui-market/dummy/product-video.mp4",
+    "detail": "Sữa tươi ít đường với hương vị tự nhiên, bổ dưỡng và dễ tiêu, lý tưởng cho mọi lứa tuổi.",
+    "soldCount": 54
+  },
+  {
+    "id": 5,
+    "categoryId": 5,
+    "name": "Bột giặt Tide Downy",
+    "price": 220000,
+    "originalPrice": 250000,
+    "images": [
+      "https://zalo-miniapp.github.io/zaui-market/dummy/product/tide.png",
+      "https://zalo-miniapp.github.io/zaui-market/dummy/product/tide.png"
+    ],
+    "video": "https://zalo-miniapp.github.io/zaui-market/dummy/product-video.mp4",
+    "detail": "Bột giặt Tide hương Downy cho quần áo trắng sạch và thơm ngát dài lâu.",
+    "soldCount": 150
+  }
+]
