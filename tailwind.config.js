@@ -10,6 +10,7 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         primary: "var(--primary)",
+        "primary-dark": "var(--primary-dark)", // Bổ sung để nhất quán
         primaryForeground: "var(--primaryForeground)",
         section: "var(--section)",
         inactive: "var(--inactive)",
@@ -17,6 +18,10 @@ module.exports = {
         subtitle: "var(--subtitle)",
         danger: "var(--danger)",
         skeleton: "var(--skeleton)",
+
+        // SỬA LỖI & NÂNG CẤP: Bổ sung màu nhấn (accent) cho các nút CTA quan trọng
+        accent: "var(--accent)",
+        "accent-dark": "var(--accent-dark)",
       },
       spacing: {
         st: "var(--safe-top)",

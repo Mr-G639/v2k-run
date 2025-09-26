@@ -1,27 +1,24 @@
-import HorizontalDivider from "@/components/horizontal-divider";
+// src/pages/cart/delivery.tsx
+
 import Section from "@/components/section";
-import { StationSkeleton } from "@/components/skeleton";
 import TransitionLink from "@/components/transition-link";
 import {
-  HomeIcon,
   LocationMarkerLineIcon,
   LocationMarkerPackageIcon,
-  PackageDeliveryIcon,
   PlusIcon,
-  ShipperIcon,
 } from "@/components/vectors";
-import {
-  deliveryModeState,
-  selectedStationState,
-  shippingAddressState,
-} from "@/state";
-import { useAtom, useAtomValue } from "jotai";
-import { Suspense } from "react";
+import { shippingAddressState } from "@/state";
+import { useAtomValue } from "jotai";
 import DeliverySummary from "./delivery-summary";
 
+/**
+ * Component con, chịu trách nhiệm hiển thị thông tin địa chỉ giao hàng
+ * hoặc nút để thêm địa chỉ mới.
+ */
 function ShippingAddressSummary() {
   const shippingAddress = useAtomValue(shippingAddressState);
 
+  // Nếu chưa có địa chỉ, hiển thị nút "Thêm địa chỉ"
   if (!shippingAddress) {
     return (
       <TransitionLink
@@ -37,6 +34,7 @@ function ShippingAddressSummary() {
     );
   }
 
+  // Nếu đã có địa chỉ, hiển thị thông tin tóm tắt
   return (
     <DeliverySummary
       icon={<LocationMarkerLineIcon />}
@@ -48,62 +46,14 @@ function ShippingAddressSummary() {
   );
 }
 
-function SelectedStationSummary() {
-  const selectedStation = useAtomValue(selectedStationState);
-  return (
-    <DeliverySummary
-      icon={<HomeIcon />}
-      title="Nhận hàng tại"
-      subtitle={selectedStation.name}
-      description={selectedStation.address}
-      linkTo="/stations"
-    />
-  );
-}
-
+/**
+ * Component chính đã được tái cấu trúc triệt để.
+ * Toàn bộ logic lựa chọn phương thức đã được loại bỏ.
+ */
 function Delivery() {
-  const [selectedDeliveryMode, setSelectedDeliveryMode] =
-    useAtom(deliveryModeState);
-
   return (
-    <Section title="Hình thức giao hàng" className="rounded-lg">
-      <div className="grid grid-cols-2 gap-4 p-4 pt-2">
-        {(
-          [
-            {
-              type: "shipping",
-              name: "Giao tận nơi",
-              icon: <ShipperIcon />,
-            },
-            {
-              type: "pickup",
-              name: "Tự đến lấy",
-              icon: <PackageDeliveryIcon />,
-            },
-          ] as const
-        ).map((option) => (
-          <button
-            key={option.type}
-            className={"flex justify-center items-center space-x-2 text-base font-medium bg-background rounded-full h-12 px-3.5 ".concat(
-              selectedDeliveryMode === option.type
-                ? "border border-primary text-primary"
-                : ""
-            )}
-            onClick={() => setSelectedDeliveryMode(option.type)}
-          >
-            {option.icon}
-            <span>{option.name}</span>
-          </button>
-        ))}
-      </div>
-      <HorizontalDivider />
-      {selectedDeliveryMode === "shipping" ? (
-        <ShippingAddressSummary />
-      ) : (
-        <Suspense fallback={<StationSkeleton />}>
-          <SelectedStationSummary />
-        </Suspense>
-      )}
+    <Section title="Địa chỉ giao hàng" className="rounded-lg">
+      <ShippingAddressSummary />
     </Section>
   );
 }

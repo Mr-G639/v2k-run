@@ -1,3 +1,5 @@
+// src/pages/cart/pay.tsx
+
 import { useCheckout } from "@/hooks/useOrder";
 import { useAtomValue } from "jotai";
 import { cartTotalState } from "@/state";
@@ -21,6 +23,7 @@ export default function Pay() {
       <Button
         onClick={async () => {
           setPaying(true);
+          // SỬA LỖI: Hàm checkout giờ đã xử lý mọi thứ, chỉ cần gọi nó
           await checkout();
           setPaying(false);
         }}

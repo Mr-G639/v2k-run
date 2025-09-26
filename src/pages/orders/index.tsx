@@ -1,50 +1,68 @@
+// src/pages/orders/index.tsx
 
-import { FC, PropsWithChildren, ReactNode } from "react";
-import { Box, Text } from "zmp-ui";
-import { Link } from "react-router-dom";
+import { ordersState } from "@/state";
+import { OrderStatus } from "@/types"; // Import trực tiếp OrderStatus để đảm bảo type-safe
+import { useLocation } from "react-router-dom";
+import { Icon, Tabs } from "zmp-ui";
+import OrderList from "./order-list";
 
-export interface SectionProps {
-  title: string;
-  /**
-   * Nội dung của Section, thường là danh sách sản phẩm hoặc các thành phần khác.
-   */
-  children: ReactNode;
-  /**
-   * Nếu là `true`, sẽ hiển thị một liên kết "Xem thêm" ở góc phải.
-   * Mặc định là `false`.
-   */
-  more?: boolean;
-  /**
-   * Đường dẫn cho liên kết "Xem thêm".
-   * Mặc định là "/".
-   */
-  path?: string;
-}
-
-/**
- * Component Section được dùng để tạo các khối nội dung có tiêu đề trên trang.
- * Ví dụ: "Flash Sale", "Sản phẩm bán chạy".
- * Hỗ trợ tùy chọn hiển thị nút "Xem thêm".
- */
-const Section: FC<PropsWithChildren<SectionProps>> = ({
-  title,
-  children,
-  more = false, // Đặt giá trị mặc định
-  path = "/",      // Đặt giá trị mặc định
-}) => {
-  return (
-    <Box className="bg-white">
-      <div className="flex items-center justify-between p-4 pb-2">
-        <Text.Title className="font-bold">{title}</Text.Title>
-        {more && (
-          <Link to={path} className="text-primary text-sm font-medium">
-            Xem thêm
-          </Link>
-        )}
-      </div>
-      {children}
-    </Box>
-  );
+// Ánh xạ key từ state điều hướng đến ID của tab
+const tabMapping = {
+  pending: "pending",
+  completed: "completed",
+  cancelled: "cancelled",
 };
 
-export default Section;
+export default function OrdersPage() {
+  const location = useLocation();
+  const defaultTab =
+    tabMapping[location.state?.tab as keyof typeof tabMapping] || "pending";
+
+  const tabItems = [
+    {
+      key: "pending",
+      label: (
+        <span className="flex items-center space-x-2">
+          <Icon icon="zi-clock-1" />
+          <span>Đang xử lý</span>
+        </span>
+      ),
+      // SỬA LỖI: Sử dụng prop 'node' và truyền đúng kiểu OrderStatus
+      node: <OrderList ordersState={ordersState("pending" as OrderStatus)} />,
+    },
+    {
+      key: "completed",
+      label: (
+        <span className="flex items-center space-x-2">
+          <Icon icon="zi-check-circle" />
+          <span>Đã hoàn thành</span>
+        </span>
+      ),
+      node: (
+        <OrderList
+          ordersState={ordersState("completed" as OrderStatus)}
+          isCompleted
+        />
+      ),
+    },
+    {
+      key: "cancelled",
+      label: (
+        <span className="flex items-center space-x-2">
+          <Icon icon="zi-close-circle" />
+          <span>Đã huỷ</span>
+        </span>
+      ),
+      node: <OrderList ordersState={ordersState("cancelled" as OrderStatus)} />,
+    },
+  ];
+
+  return (
+    <Tabs
+      defaultActiveKey={defaultTab}
+      id="order-tabs"
+      items={tabItems}
+      className="h-full flex flex-col"
+    />
+  );
+}
